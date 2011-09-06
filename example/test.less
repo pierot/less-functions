@@ -1,0 +1,58 @@
+@import "../library.less";
+
+body {
+	font-family: Arial;
+	padding: 50px;
+}
+
+div {
+	width: 400px;
+	height: 50px;
+	background: #ccc;
+  padding: 5px;
+	margin-bottom: 50px;
+}
+
+.center {
+	.center-block;
+}
+
+.gradient-bordered-rounded {
+	color: #fff;
+
+	.gradient;
+	.bordered(#f00, #0f0, #00F, #000);
+	.rounded(13px);
+}
+
+.dropshadow-borderradius-opacity {
+  .drop-shadow(10px, 5px, 3px, 0.3);
+  .opacity(0.4);
+
+	.bordered(#f00, #0f0, #00F, #000);
+  .border-radius(7px, 7px, 7px, 7px);
+}
+
+.transitionduration-rotation {
+	margin: 130px 0px;
+ 
+  &:hover {
+    .rotation(20deg);
+    .transition(0.5s, ease-out);
+    .transition-duration(4s); 
+  }
+}
+
+.scale-transition-innershadow {
+  .inner-shadow(3px, 2px, 2px, 0.7);
+
+	&:hover {
+    margin-left: 210px; 
+    .scale(2);
+    .transition(0.5s, ease-out);
+  }
+}
+
+.boxshadow {
+  .box-shadow(3px 3px 3px rgba(0, 0, 0, 0.4));
+}
